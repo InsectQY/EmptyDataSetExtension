@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
 
   s.name             = 'EmptyDataSetExtension'
   s.version          = '1.0.0'
-  s.summary          = 'Use DZNEmptyDataSet without dataSource and delegate.'
+  s.summary          = 'extension of EmptyDataSet'
 
   s.description      = 'Use DZNEmptyDataSet without dataSource and delegate.'
 
-  s.homepage         = 'https://github.com/InsectQY/EmptyDataSetExtension.git'
+  s.homepage         = 'https://github.com/InsectQY/EmptyDataSetExtension'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LeslieChen' => '704861917@qq.com' }
   s.source           = { :git => 'https://github.com/InsectQY/EmptyDataSetExtension.git', :tag => s.version.to_s }
