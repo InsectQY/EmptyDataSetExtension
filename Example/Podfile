@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'EmptyDataSetExtension_Example' do
+  pod 'EmptyDataSetExtension', :path => '../'
+
+  target 'EmptyDataSetExtension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

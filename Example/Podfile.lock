@@ -1,0 +1,23 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - EmptyDataSetExtension (1.0.0):
+    - DZNEmptyDataSet (~> 1.8.1)
+
+DEPENDENCIES:
+  - EmptyDataSetExtension (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - DZNEmptyDataSet
+
+EXTERNAL SOURCES:
+  EmptyDataSetExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  EmptyDataSetExtension: 80c2f30440576d9d16e2332c9f825d665240bb4a
+
+PODFILE CHECKSUM: d2d4ff7fc4b8a60ca4ba6ec29cef8c900360d8da
+
+COCOAPODS: 1.11.2
