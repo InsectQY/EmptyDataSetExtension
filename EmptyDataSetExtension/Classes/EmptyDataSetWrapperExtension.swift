@@ -21,13 +21,18 @@ public extension EmptyDataSetWrapper where Base: UIScrollView {
         base.emptyDataSetConfig = config
     }
 
-    func reload() {
-        base.reloadEmptyDataSet()
+    func setConfigAndInitialize(_ config: EmptyDataSetConfig = EmptyDataSetConfig()) {
+        setConfig(config)
+        initialize()
     }
 
     func initialize() {
         base.emptyDataSetSource = config?.proxy
         base.emptyDataSetDelegate = config?.proxy
+    }
+
+    func reload() {
+        base.reloadEmptyDataSet()
     }
 }
 
