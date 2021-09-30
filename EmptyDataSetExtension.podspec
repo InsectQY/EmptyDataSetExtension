@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
       ss.source_files = 'EmptyDataSetExtension/Classes/RxSwift/*'
       ss.dependency 'RxSwift', '~> 6.2.0'
       ss.dependency 'RxCocoa', '~> 6.2.0'
+      ss.dependency 'EmptyDataSetExtension'
   end
 
 end
