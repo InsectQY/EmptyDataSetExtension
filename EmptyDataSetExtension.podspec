@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
   s.dependency 'DZNEmptyDataSet', '~> 1.8.1'
 
   s.subspec 'RxSwift' do |ss|
+      s.source_files = 'EmptyDataSetExtension/Classes/Public/*'
       ss.source_files = 'EmptyDataSetExtension/Classes/RxSwift/*'
       ss.dependency 'RxSwift', '~> 6.2.0'
       ss.dependency 'RxCocoa', '~> 6.2.0'
-      ss.dependency 'EmptyDataSetExtension'
   end
 
 end
