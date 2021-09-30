@@ -76,6 +76,9 @@ open class EmptyDataSetConfig {
     /// Default is false.
     open var isLoading: Bool = false {
         didSet {
+            if oldValue == isLoading {
+                return
+            }
             valueChanged?()
         }
     }
