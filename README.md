@@ -12,7 +12,7 @@ It also support RxSwift.
 
 Swift 5.0+
 
-iOS 8+
+iOS 9.0+
 
 ## How to use
 
