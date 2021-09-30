@@ -5,24 +5,42 @@
 [![License](https://img.shields.io/cocoapods/l/EmptyDataSetExtension.svg?style=flat)](https://cocoapods.org/pods/EmptyDataSetExtension)
 [![Platform](https://img.shields.io/cocoapods/p/EmptyDataSetExtension.svg?style=flat)](https://cocoapods.org/pods/EmptyDataSetExtension)
 
-## Example
+EmptyDataSetExtension is a [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet) enhancement. It provides object property to replace the emptyDataSetSource and emptyDataSetDelegate.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## How to use
+
+1. Initialize the EmptyDataSetConfig object
+
+```swift
+let config = EmptyDataSetConfig()
+```
+
+2. Invoke `setConfig` of UIScrollView or its subclass and activite emptyDataSet.
+
+```swift
+scrollView.emptyDataSet.setConfig(config)
+scrollView.emptyDataSet.run
+```
+
+or: 
+
+```swift
+scrollView.emptyDataSet.setConfigAndRun(config)
+```
 
 ## Requirements
 
+Swift 5.0+
+
+iOS 8+
+
 ## Installation
 
-EmptyDataSetExtension is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+**CocoaPods**
 
 ```ruby
 pod 'EmptyDataSetExtension'
 ```
-
-## Author
-
-704861917@qq.com, 704861917@qq.com
 
 ## License
 
