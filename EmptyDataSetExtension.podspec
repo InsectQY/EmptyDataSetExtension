@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'EmptyDataSetExtension'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'extension of EmptyDataSet'
 
   s.description      = 'Use DZNEmptyDataSet without dataSource and delegate.'
