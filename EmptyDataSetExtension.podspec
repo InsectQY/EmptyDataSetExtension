@@ -25,11 +25,18 @@ Pod::Spec.new do |s|
   s.swift_version = "5.0"
 
   s.frameworks = 'UIKit'
-  s.dependency 'DZNEmptyDataSet', '~> 1.8.1'
+
+  s.default_subspec = 'Core'
+
+  s.subspec 'Core' do |ss|
+      ss.source_files = 'EmptyDataSetExtension/Classes/Public/*'
+      ss.dependency 'DZNEmptyDataSet', '~> 1.8.1'
+  end
 
   s.subspec 'RxSwift' do |ss|
-      ss.source_files = 'EmptyDataSetExtension/Classes/Public/*'
+
       ss.source_files = 'EmptyDataSetExtension/Classes/RxSwift/*'
+      ss.dependency 'EmptyDataSetExtension/Core'
       ss.dependency 'RxSwift', '~> 6.2.0'
       ss.dependency 'RxCocoa', '~> 6.2.0'
   end
