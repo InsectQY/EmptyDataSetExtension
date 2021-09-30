@@ -266,7 +266,6 @@ pod 'EmptyDataSetExtension'
 RxSwift support
 
 ```ruby
-pod 'EmptyDataSetExtension'
 pod 'EmptyDataSetExtension/RxSwift'
 ```
 
