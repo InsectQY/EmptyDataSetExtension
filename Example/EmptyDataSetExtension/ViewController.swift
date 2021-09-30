@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         
-        
+        UITableView().emptyDataSet.config?.rx.isLoading
     }
 }
 

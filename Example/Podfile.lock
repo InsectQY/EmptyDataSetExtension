@@ -1,7 +1,18 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - EmptyDataSetExtension (1.0.0):
+  - EmptyDataSetExtension (1.0.2):
     - DZNEmptyDataSet (~> 1.8.1)
+    - EmptyDataSetExtension/RxSwift (= 1.0.2)
+  - EmptyDataSetExtension/RxSwift (1.0.2):
+    - DZNEmptyDataSet (~> 1.8.1)
+    - RxCocoa (~> 6.2.0)
+    - RxSwift (~> 6.2.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
 
 DEPENDENCIES:
   - EmptyDataSetExtension (from `../`)
@@ -9,6 +20,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - DZNEmptyDataSet
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 EXTERNAL SOURCES:
   EmptyDataSetExtension:
@@ -16,7 +30,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  EmptyDataSetExtension: 80c2f30440576d9d16e2332c9f825d665240bb4a
+  EmptyDataSetExtension: b246517495066836e7f83077c7d8821e62e0e765
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
 PODFILE CHECKSUM: d2d4ff7fc4b8a60ca4ba6ec29cef8c900360d8da
 

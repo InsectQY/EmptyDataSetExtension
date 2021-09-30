@@ -1,6 +1,5 @@
 # EmptyDataSetExtension
 
-[![CI Status](https://img.shields.io/travis/704861917@qq.com/EmptyDataSetExtension.svg?style=flat)](https://travis-ci.org/704861917@qq.com/EmptyDataSetExtension)
 [![Version](https://img.shields.io/cocoapods/v/EmptyDataSetExtension.svg?style=flat)](https://cocoapods.org/pods/EmptyDataSetExtension)
 [![License](https://img.shields.io/cocoapods/l/EmptyDataSetExtension.svg?style=flat)](https://cocoapods.org/pods/EmptyDataSetExtension)
 [![Platform](https://img.shields.io/cocoapods/p/EmptyDataSetExtension.svg?style=flat)](https://cocoapods.org/pods/EmptyDataSetExtension)

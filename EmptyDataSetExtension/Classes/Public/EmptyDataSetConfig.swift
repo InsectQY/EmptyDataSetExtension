@@ -29,15 +29,15 @@ open class EmptyDataSetConfig {
 
     /// The title to be used for the specified button state.
     /// The dataset uses a fixed font style by default, if no attributes are set. If you want a different font style, return a attributed string.
-    open var buttonTitle: ((UIControl.State) -> NSAttributedString?)?
+    open var buttonTitle: [UIControlState: NSAttributedString?]?
 
     /// The image to be used for the specified button state.
     /// This closure will override buttonTitleForEmptyDataSet:forState: and present the image only without any text.
-    open var buttonImage: ((UIControl.State) -> UIImage?)?
+    open var buttonImage: [UIControlState: UIImage?]?
 
     /// A background image to be used for the specified button state.
     /// There is no default style for this call.
-    open var buttonBackgroundImage: ((UIControl.State) -> UIImage?)?
+    open var buttonBackgroundImage: [UIControlState: UIImage?]?
 
     /// The background color of the dataset.
     /// Default is clear color.
@@ -119,9 +119,9 @@ open class EmptyDataSetConfig {
                 image: UIImage? = nil,
                 imageTintColor: UIColor? = nil,
                 imageAnimation: CAAnimation? = nil,
-                buttonTitle: ((UIControl.State) -> NSAttributedString?)? = nil,
-                buttonImage: ((UIControl.State) -> UIImage?)? = nil,
-                buttonBackgroundImage: ((UIControl.State) -> UIImage?)? = nil,
+                buttonTitle: [UIControlState: NSAttributedString?]? = nil,
+                buttonImage: [UIControlState: UIImage?]? = nil,
+                buttonBackgroundImage: [UIControlState: UIImage?]? = nil,
                 backgroundColor: UIColor? = nil,
                 customView: UIView? = nil,
                 verticalOffset: CGFloat = 0,

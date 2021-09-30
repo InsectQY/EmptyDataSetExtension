@@ -19,51 +19,63 @@ class EmptyDataSetProtocolProxy: NSObject {
 extension EmptyDataSetProtocolProxy: DZNEmptyDataSetSource {
 
     public func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        config?.title
+        return config?.title
     }
 
     public func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        config?.detail
+        return config?.detail
     }
 
     public func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-        config?.image
+        return config?.image
     }
 
     public func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        config?.imageTintColor
+        return config?.imageTintColor
     }
 
     public func imageAnimation(forEmptyDataSet scrollView: UIScrollView) -> CAAnimation? {
-        config?.imageAnimation
+        return config?.imageAnimation
     }
 
     public func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> NSAttributedString? {
-        config?.buttonTitle?(state)
+        if let value = config?.buttonTitle?[state.toState] {
+            return value
+        } else {
+            return nil
+        }
     }
 
     public func buttonImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage? {
-        config?.buttonImage?(state)
+        if let value = config?.buttonImage?[state.toState] {
+            return value
+        } else {
+            return nil
+        }
     }
 
     public func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage? {
-        config?.buttonBackgroundImage?(state)
+        if let value = config?.buttonBackgroundImage?[state.toState] {
+            return value
+        } else {
+            return nil
+        }
     }
 
     public func backgroundColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        config?.backgroundColor
+        return config?.backgroundColor
     }
 
     public func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
-        config?.customView
+        return config?.customView
     }
 
     public func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        config?.verticalOffset ?? 0
+        return config?.verticalOffset ?? 0
     }
 
     public func spaceHeight(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        config?.spaceHeight ?? 11
+        return config?.spaceHeight ?? 11
     }
 }
 
@@ -72,27 +84,27 @@ extension EmptyDataSetProtocolProxy: DZNEmptyDataSetSource {
 extension EmptyDataSetProtocolProxy: DZNEmptyDataSetDelegate {
 
     public func emptyDataSetShouldFade(in scrollView: UIScrollView) -> Bool {
-        config?.isFadeIn ?? true
+        return config?.isFadeIn ?? true
     }
 
     public func emptyDataSetShouldBeForced(toDisplay scrollView: UIScrollView) -> Bool {
-        config?.isBeForcedToDisplay ?? false
+        return config?.isBeForcedToDisplay ?? false
     }
 
     public func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
-        (config?.isDisplay ?? true) ? !(config?.isLoading ?? false) : false
+        return (config?.isDisplay ?? true) ? !(config?.isLoading ?? false) : false
     }
 
     public func emptyDataSetShouldAllowTouch(_ scrollView: UIScrollView) -> Bool {
-        config?.isAllowTouch ?? true
+        return config?.isAllowTouch ?? true
     }
 
     public func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
-        config?.isAllowScroll ?? false
+        return config?.isAllowScroll ?? false
     }
 
     public func emptyDataSetShouldAnimateImageView(_ scrollView: UIScrollView) -> Bool {
-        config?.isAnimateImageView ?? true
+        return config?.isAnimateImageView ?? true
     }
 
     public func emptyDataSet(_ scrollView: UIScrollView, didTap view: UIView) {
